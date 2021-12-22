@@ -9,16 +9,16 @@ TOOLS = (
     #         "macos":   "",
     #     },
     # },
-    # {
-    #     "name": "edge",
-    #     "urls": {
-    #         "win32":   "",
-    #         "win64":   "",
-    #         "linux32": "",
-    #         "linux64": "",
-    #         "macos":   "",
-    #     },
-    # },
+    {
+        "name": "edge",
+        "urls": {
+            "win32":   "https://msedgedriver.azureedge.net/96.0.1054.62/edgedriver_win32.zip",
+            "win64":   "https://msedgedriver.azureedge.net/96.0.1054.62/edgedriver_win64.zip",
+            "linux32": "",
+            "linux64": "https://msedgedriver.azureedge.net/96.0.1054.62/edgedriver_linux64.zip",
+            "macos":   "https://msedgedriver.azureedge.net/96.0.1054.62/edgedriver_mac64.zip",
+        },
+    },
     {
         "name": "Firefox",
         "urls": {
