@@ -4,6 +4,7 @@ from selenium import webdriver
 
 import constants
 import config
+import web
 
 
 BROWSERS = tuple(i["name"] for i in constants.TOOLS)
@@ -74,6 +75,8 @@ def tool_in_config() -> str:
         tool_name = dump_tool_to_config()
     else:
         tool_name = content["tool"]
+
+    web.set_driver(tool_name, config.path_dir)
 
     return tool_name
 

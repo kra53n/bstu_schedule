@@ -21,7 +21,6 @@ TOOLS = (
     # },
     {
         "name": "Firefox",
-        #"driver_name": "geckodriver",
         "urls": {
             "win32":   "https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-win32.zip",
             "win64":   "https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-win64.zip",
@@ -42,7 +41,6 @@ TOOLS = (
     # },
     {
         "name": "Opera",
-        #"driver_name": "",
         "urls": {
             "win32":   "https://github.com/operasoftware/operachromiumdriver/releases/download/v.96.0.4664.45/operadriver_win32.zip",
             "win64":   "https://github.com/operasoftware/operachromiumdriver/releases/download/v.96.0.4664.45/operadriver_win64.zip",
