@@ -10,18 +10,18 @@ from constants import (
 
 
 path_dir = __file__[:-(len(__name__) + len(".py"))]
-name = CONFIG_FILE_NAME + ".yaml"
+config_filename = CONFIG_FILE_NAME + ".yaml"
 
 
 def check_existing_config():
-    return True if name in tuple(walk(path_dir))[0][2] else False
+    return True if config_filename in tuple(walk(path_dir))[0][2] else False
 
 def create_config_file():
-    with open(os.path.join(path_dir, name), "a") as f:
+    with open(os.path.join(path_dir, config_filename), "a") as f:
         pass
 
 def file_content() -> dict:
-    with open(os.path.join(path_dir, name), "r") as f:
+    with open(os.path.join(path_dir, config_filename), "r") as f:
         return yaml.safe_load("".join(f.readlines()))
 
 def return_skiped_necessary_data():
@@ -34,5 +34,5 @@ def return_skiped_necessary_data():
             if data not in f_content]
 
 def dump_data(data):
-    with open(os.path.join(path_dir, name), "w") as f:
+    with open(os.path.join(path_dir, config_filename), "w") as f:
         f.writelines(yaml.dump(data))

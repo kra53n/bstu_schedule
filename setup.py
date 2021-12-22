@@ -4,7 +4,7 @@ from setuptools import setup
 setup(
     name="bstu_schedule",
     version="0.0.1",
-    description="Open the site with scedule of BSTU",
+    description="Open webpage with scedule of BSTU",
     license="MIT",
     url="https://github.com/Krai53n/bstu_schedule",
     author="Gregory Backhtin",

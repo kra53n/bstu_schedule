@@ -1,14 +1,68 @@
-AVAILABLE_TOOLS = (
-    "Chrome",
-    "Edge",
-    "Firefox",
-    "Ie",
-    "Opera",
-    "PhantomJS",
-    "Remote",
-    "Safari",
-    "WebKitGTK",
+TOOLS = (
+    # {
+    #     "name": "chrome",
+    #     "urls": {
+    #         "win32":   "",
+    #         "win64":   "",
+    #         "linux32": "",
+    #         "linux64": "",
+    #         "macos":   "",
+    #     },
+    # },
+    # {
+    #     "name": "edge",
+    #     "urls": {
+    #         "win32":   "",
+    #         "win64":   "",
+    #         "linux32": "",
+    #         "linux64": "",
+    #         "macos":   "",
+    #     },
+    # },
+    {
+        "name": "Firefox",
+        #"driver_name": "geckodriver",
+        "urls": {
+            "win32":   "https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-win32.zip",
+            "win64":   "https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-win64.zip",
+            "linux32": "https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-linux32.tar.gz",
+            "linux64": "https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-linux64.tar.gz",
+            "macos":   "https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-macos.tar.gz",
+        },
+    },
+    # {
+    #     "name": "ie",
+    #     "urls": {
+    #         "win32":   "",
+    #         "win64":   "",
+    #         "linux32": "",
+    #         "linux64": "",
+    #         "macos":   "",
+    #     },
+    # },
+    {
+        "name": "Opera",
+        #"driver_name": "",
+        "urls": {
+            "win32":   "https://github.com/operasoftware/operachromiumdriver/releases/download/v.96.0.4664.45/operadriver_win32.zip",
+            "win64":   "https://github.com/operasoftware/operachromiumdriver/releases/download/v.96.0.4664.45/operadriver_win64.zip",
+            "linux32": "",
+            "linux64": "https://github.com/operasoftware/operachromiumdriver/releases/download/v.96.0.4664.45/operadriver_linux64.zip",
+            "macos":   "https://github.com/operasoftware/operachromiumdriver/releases/download/v.96.0.4664.45/operadriver_mac64.zip",
+        },
+    },
+    # {
+    #     "name": "safari",
+    #     "urls": {
+    #         "win32":   "",
+    #         "win64":   "",
+    #         "linux32": "",
+    #         "linux64": "",
+    #         "macos":   "",
+    #     },
+    # },
 )
+
 
 TOOL_TO_USE = "Firefox"
 

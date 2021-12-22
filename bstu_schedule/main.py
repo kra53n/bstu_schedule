@@ -6,7 +6,10 @@ import constants
 import config
 
 
-def make_choice(options: (tuple, list), title: str) -> int:
+BROWSERS = tuple(i["name"] for i in constants.TOOLS)
+
+
+def make_choice(options: list, title: str) -> int:
     message = f"\n{title}\n"
     for option_num, name_option in enumerate(options):
         message += f"\t{option_num+1}. {name_option}\n"
@@ -26,8 +29,10 @@ def options_selector_elems(driver, option_name) -> list:
         ).find_elements("tag name", "option")
 
 def selector_options(driver, option_name) -> list:
-    return [option.text for option in options_selector_elems(
-        driver, option_name)]
+    return [
+        option.text for option
+        in options_selector_elems(driver, option_name)
+    ]
 
 def choose_select_option(driver, selector: str, option: str):
     for elem in options_selector_elems(driver, selector):
@@ -48,8 +53,8 @@ def create_config_if_not_exist():
         config.create_config_file()
 
 def dump_tool_to_config() -> str:
-    choice = make_choice(constants.AVAILABLE_TOOLS, "choose tool".upper())
-    tool_name = constants.AVAILABLE_TOOLS[choice]
+    choice = make_choice(BROWSERS, "choose tool".upper())
+    tool_name = BROWSERS[choice]
 
     data = config.file_content()
     if data != None:
@@ -65,7 +70,7 @@ def tool_in_config() -> str:
     content = config.file_content()
 
     if content == None or "tool" not in content.keys() or \
-        content["tool"] not in constants.AVAILABLE_TOOLS:
+        content["tool"] not in BROWSERS:
         tool_name = dump_tool_to_config()
     else:
         tool_name = content["tool"]
