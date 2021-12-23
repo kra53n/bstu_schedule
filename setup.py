@@ -18,6 +18,7 @@ setup(
     ],
     packages=[
         "bstu_schedule",
+        "bstu_schedule.web",
         "bstu_schedule.main",
         "bstu_schedule.config",
         "bstu_schedule.constans",
