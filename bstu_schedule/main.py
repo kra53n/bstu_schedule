@@ -73,10 +73,9 @@ def tool_in_config() -> str:
     if content == None or "tool" not in content.keys() or \
         content["tool"] not in BROWSERS:
         tool_name = dump_tool_to_config()
+        web.set_driver(tool_name, config.path_dir)
     else:
         tool_name = content["tool"]
-
-    web.set_driver(tool_name, config.path_dir)
 
     return tool_name
 
