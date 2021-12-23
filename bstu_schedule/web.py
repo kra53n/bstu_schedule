@@ -5,7 +5,7 @@ from sys import platform
 from os import remove
 import os.path
 
-import constants
+import bstu_schedule.constants as constants
 
 
 def osname():

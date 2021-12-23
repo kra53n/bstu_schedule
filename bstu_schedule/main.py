@@ -2,9 +2,9 @@ from time import sleep
 from sys import argv
 from selenium import webdriver
 
-import constants
-import config
-import web
+import bstu_schedule.constants as constants
+import bstu_schedule.config as config
+import bstu_schedule.web as web
 
 
 BROWSERS = tuple(i["name"] for i in constants.TOOLS)

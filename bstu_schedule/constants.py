@@ -77,7 +77,7 @@ CONFIG_NECESSARY_DATA = (
 SLEEP_TIME = 0.2
 
 ARGS = {
-    "print config": ("-p", "--print-config"),
+    "print config":  ("-p", "--print-config"),
     "change config": ("-c", "--change-config"),
-    "change tool": ("--change-tool"),
+    "change tool":   ("--change-tool"),
 }

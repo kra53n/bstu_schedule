@@ -3,7 +3,7 @@ import os.path
 
 import yaml
 
-from constants import (
+from bstu_schedule.constants import (
     CONFIG_FILE_NAME,
     CONFIG_NECESSARY_DATA,
 )
