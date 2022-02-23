@@ -1,2 +1,2 @@
-__**bstu_schedule** extension__ for browser allows user open the schedule
-page with __already pasted parameters__.
+**bstu_schedule** - extension for browser allows user open the schedule
+page with _already pasted parameters_.
